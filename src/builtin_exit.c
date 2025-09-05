@@ -56,18 +56,13 @@ int	check_longlong_range(char *arg)
 int	check_numeric(char *arg)
 {
 	int	i;
-	int	sign;
 
 	if (check_longlong_range(arg))
 		exit_non_numeric(arg);
 	i = 1;
-	sign = 1;
 	if (arg[0] == '+' || arg[0] == '-')
-	{
-		if (arg[0] == '-')
-			sign *= -1;
 		i++;
-	}
+
 	while (arg[i] == ' ' || (8 < arg[i] && arg[i] < 14))
 		i++;
 	while (arg[i] && arg[i] != '\n')

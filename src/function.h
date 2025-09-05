@@ -27,8 +27,7 @@
 # include <sys/errno.h>
 # include <readline/readline.h> //readline()
 # include <readline/history.h>
-
-# include "libft.h"
+# include "../libft/includes/libft.h"
 
 // FREE
 void	*free_null(void *temp);

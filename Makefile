@@ -14,10 +14,13 @@
 NAME = minishell
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAG = -Wall -Wextra -Werror
 
 FT_DIR = ./libft
-FT_FLAG = -I $(FT_DIR) -L $(FT_DIR) -l ft -l readline
+RD_DIR = /opt/homebrew/opt/readline
+
+FT_FLAG = -L$(FT_DIR) -L$(RD_DIR)/lib -l ft -l readline
+INC_FLAG = -I. -I$(FT_DIR) -I$(RD_DIR)/include
 
 #------COLORS-------#
 RESET = \033[0m
@@ -83,13 +86,13 @@ all : $(NAME)
 
 $(DIR_SRC)%.o : $(DIR_SRC)%.c
 	@echo "$(YELLOW)Compiling... $<$(RESET)"
-	@$(CC) $(CFLAG) -I $(DIR_SRC) -c $< -o $@
+	@$(CC) $(CFLAG) $(INC_FLAG) -c $< -o $@
 
 $(NAME) : $(SRC_OBJS) $(SRC_INCS)
 	@echo "$(GREEN)Linking Files...$(RESET)"
 	@make -C $(FT_DIR)
-	@$(CC) $(CFLAG) $(FT_FLAG) $(SRC_SRCS) -o $(NAME)
-	@echo "$(GREEN)Build Complete! - $(NAME)$(RESET)"
+	@$(CC) $(CFLAG) $(INC_FLAG) $(FT_FLAG) $(SRC_SRCS) -o $(NAME)
+	@echo "$(GREEN)Build Complete - $(NAME)$(RESET)"
 
 clean :
 	@echo "$(RED)Cleaning Object Files...$(RESET)"
