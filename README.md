@@ -13,7 +13,8 @@
 - 환경 변수(`$HOME`, `$PATH` 등) 파싱 및 확장
 - 빌트인 명령어 지원 (`cd`, `echo`, `pwd`, `export`, `unset`, `env`, `exit`)
 - 시그널 처리 (`Ctrl + C`, `Ctrl + D`, `Ctrl + \`)
-- 여러 명령어를 구분하는 세미콜론(`;`) 지원
+
+![몽쉘 실행화면](./assets/shell_play.gif)
 
 ## 실행 방법
 ```bash
@@ -30,10 +31,10 @@ make
 
 ### 사용 예시
 ```bash
-mongshell$ echo Hello World
+mongshell🐶> echo Hello World
 Hello World
-mongshell$ ls -l | grep mongshell
-
+mongshell🐶> ls -l | grep mongshell
+-rwxr-xr-x   1 jaebin  staff  74824  9  6 17:03 mongshell
 ```
 
 ## 기술 스택 & 구현
