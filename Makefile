@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 #-----STANDARD-----#
-NAME = minishell
+NAME = mongshell
 
 CC = cc
 CFLAG = -Wall -Wextra -Werror
