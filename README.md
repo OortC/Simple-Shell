@@ -1,7 +1,7 @@
 # Simple-Shell
 
 ## 프로젝트 소개
-`Simple-Shel`은 리눅스의 `bash` 쉘을 간단하게 구현한 프로젝트입니다.   
+`Simple-Shel`은 리눅스의 `bash` 쉘을 간단하게 구현한 팀 프로젝트입니다.   
 사용자로부터 명령어를 입력받아 파싱하고, 프로세스를 실행 및 제어하는 기능을 제공합니다.
 또한 직접 구현한 빌트인 함수를 제공하고, 프로세스 간의 파이프 통신을 지원합니다.
 
@@ -20,13 +20,13 @@
 ```bash
 # 저장소 클론
 git clone https://github.com/OortC/Simple-Shell.git
-cd minishell
+cd Simple-shell
 
 # 빌드 (macOS만 지원함)
 make
 
 # 실행
-./minishell
+./mongshell
 ```
 
 ### 사용 예시
