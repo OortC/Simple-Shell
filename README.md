@@ -39,6 +39,7 @@ mongshell🐶> ls -l | grep mongshell
 
 ## 기술 스택 & 구현
 - **언어:** C
+- **운영체제 환경:** macOS
 - **시스템 콜:** `fork`, `execve`, `pipe`, `dup2`, `wait`, `signal`, `readline` 등
 - **메모리 관리:** 동적 할당 최소화, 누수 방지
 - **파싱:** 토큰화, 따옴표(`'`, `"`) 처리, 환경 변수 치환
